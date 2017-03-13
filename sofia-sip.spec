@@ -41,7 +41,7 @@ make %{?_smp_mflags}
 
 %install
 rm -rf %{buildroot}
-make install DESTDIR=%{buildroot}
+DESTDIR=%{buildroot} make install
 rm -rf %{buildroot}/usr/share/man/man1
 find %{buildroot}
 %{genfilelist} %{buildroot} > %{name}-%{version}-filelist
