@@ -43,6 +43,7 @@ make %{?_smp_mflags}
 rm -rf %{buildroot}
 DESTDIR=%{buildroot} make install
 rm -rf %{buildroot}/usr/share/man/man1
+rm -rf %{buildroot}/var/www/sofia-sip/tag_dll.awk
 %{genfilelist} %{buildroot} > %{name}-%{version}-filelist
 
 %clean
